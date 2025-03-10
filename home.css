@@ -1,0 +1,157 @@
+/*直接更改全局颜色*/
+:root {
+  --text-color: rgb(0, 0, 0); /*文字颜色*/
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  /* 如需背景图，使用下方选项 */
+  /* background: url(img/bg.jpg) no-repeat; */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+#about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-me-inner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 1000px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: rgb(255, 255, 255);
+  border-width: 1px;
+  /*圆角*/
+  /*border-radius: 30px;*/
+  border: 8px solid rgb(0, 0, 0);
+  /*投影*/
+  /*box-shadow:0 15px 10px rgba(0, 0, 0, 0.5);*/
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.text-body a {
+  text-decoration: none;
+}
+
+.text-body {
+    box-sizing: border-box;
+    width: 90%;
+    min-width: 200px;
+    max-width: 980px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0 40px 0;
+    color: var(--text-color);
+}
+
+
+.text-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background: none;
+}
+
+h3{
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: rgb(0, 0, 0);
+    background: url(img/50.jpg) no-repeat;
+    background-attachment: scroll;
+    background-position: 60%;
+  }
+   #about-me-inner {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 90%;
+    border-radius: 10px;
+   }
+}
+
+/* 按钮 */
+
+.social {
+  color: var(--text-color);
+  display:block;
+  appearance: none;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid #000000;
+  /*border-radius: 10px;*/
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: normal;
+  margin: 10px;
+  min-height: 50px;
+  min-width: 100px;
+  max-width: 500px;
+  font-size: 16px;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  /*box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;*/
+}
+
+.social:disabled {
+  pointer-events: none;
+}
+
+.social:hover {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 1);
+  /*box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;*/
+  transform: translateY(-2px);
+  border: 3px solid #ffffff00;
+}
+
+.social:active {
+  box-shadow: none;
+  background: rgb(124, 124, 124);
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 1000px) {
+  .social {
+    max-width:250px;
+  }
+}
+
+/* 脚注*/
+
+#bottom-outer {
+  height: 30px;
+  text-align: center;
+}
+
+#bottom-inner {
+  display: inline-block;
+  color: var(--text-color);
+  font-size: 12px;
+}
+
+#bottom-inner a{
+  text-decoration: none;
+}
+
+#bottom-inner a:hover{
+  text-decoration: underline;
+}
+
+.hidden{
+  display:none;
+}
